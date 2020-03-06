@@ -17,7 +17,7 @@
 
   ! starting specifications
     initial_mass = MASSd0 ! in Msun units
-    mesh_delta_coeff = 0.5d0
+    mesh_delta_coeff = 0.8d0
     varcontrol_target = 1d-4
     
     hot_wind_scheme = 'Vink'
@@ -33,5 +33,11 @@
     xa_central_lower_limit_species(1) = 'he4'
     xa_central_lower_limit(1) = 1d-4
     ! photosphere_r_upper_limit = 149.9
+
+
+   history_interval = 1      
+   profile_interval = 100
+   max_num_profile_models = 100
+
 
 / ! end of controls namelist

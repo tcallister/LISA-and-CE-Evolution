@@ -257,9 +257,9 @@
 
       ! log10 total luminosity for reaction categories (Lsun units)
 
-      pp
-      cno
-      tri_alfa
+      ! pp
+      ! cno
+      ! tri_alfa
       !burn_c
       !burn_n
       !burn_o
@@ -357,8 +357,8 @@
       !he_core_k
 
    !## carbon core
-      c_core_mass
-      c_core_radius
+      ! c_core_mass
+      ! c_core_radius
       !c_core_lgT
       !c_core_lgRho
       !c_core_L
@@ -368,8 +368,8 @@
       !c_core_k
 
    !## oxygen core
-      o_core_mass
-      o_core_radius
+      ! o_core_mass
+      ! o_core_radius
       !o_core_lgT
       !o_core_lgRho
       !o_core_L
@@ -379,8 +379,8 @@
       !o_core_k
 
    !## silicon core
-      si_core_mass
-      si_core_radius
+      ! si_core_mass
+      ! si_core_radius
       !si_core_lgT
       !si_core_lgRho
       !si_core_L
@@ -390,8 +390,8 @@
       !si_core_k
 
    !## iron core
-      fe_core_mass
-      !fe_core_radius
+      ! fe_core_mass
+      ! fe_core_radius
       !fe_core_lgT
       !fe_core_lgRho
       !fe_core_L
