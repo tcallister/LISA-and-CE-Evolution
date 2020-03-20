@@ -7,6 +7,12 @@ def isNSBHWD(array):
     array = np.array(array,dtype=int)
     return ((array >=10) & (array != 15))
 
+def bothWD(array1, array2):
+    # array* is a kstar_* array of stellar types
+    # assumes the stellar types from Hurley 2000
+    array1 = np.array(array1,dtype=int)
+    array2 = np.array(array2,dtype=int)
+    return(((array1[:] >= 10) & (array1[:] <13)) & ((array2[:] >= 10) & (array2[:] <13)))
 
 def make2Dmap(x, y, z, x1=0, x2=1, y1=0, y2=1, res=20):
     minx = min(min(x),x1)
