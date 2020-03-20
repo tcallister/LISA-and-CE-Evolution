@@ -1,5 +1,6 @@
 .ipynb_checkpoints/**
 */.ipynb_checkpoints/**
+COSMIC_popsynth/.ipynb_checkpoints/**
 *~
 *pycache*
 *.o
