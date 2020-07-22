@@ -6,3 +6,4 @@ MESA_files/.ipynb_checkpoints/*
 *pycache*
 *.o
 *.mod
+*.pdf
