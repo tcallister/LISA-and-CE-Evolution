@@ -1,0 +1,84 @@
+&pgstar
+
+      pgstar_interval = 100
+
+         Grid1_win_flag = .true.
+
+   Summary_Profile_win_flag = .true.
+   Summary_Profile_win_width = 6
+   Summary_Profile_win_aspect_ratio = 0.75 ! aspect_ratio = height/width
+   Summary_Profile_xleft = 0.15
+   Summary_Profile_xright = 0.85
+   Summary_Profile_ybot = 0.15
+   Summary_Profile_ytop = 0.85
+   Summary_Profile_txt_scale = 1.0
+   Summary_Profile_title = 'Summary_Profile'
+
+   Summary_Profile_xaxis_name = 'mass'
+   Summary_Profile_xaxis_reversed = .false.
+
+   Summary_Profile_xmin = -101d0 ! only used if /= -101d0
+   Summary_Profile_xmax = -101d0 ! only used if /= -101d0
+
+!    Summary_Profile_name(:) = '' ! as might appear in `profile_columns.list`
+! ! if name len=0, then skip this one
+! Summary_Profile_legend(:) = '' ! if legend len=0, then will use name for legend
+! Summary_Profile_scaled_value(:) = .true.
+! ! if true, show values scaled max to 1.0 and min to 0.0
+! ! if false, show the unmapped values (which should be in range 0.0 to 1.0)
+! ! typically set .false. for mass fractions; .true. for everything else.
+
+Summary_Profile_num_lines = 11 ! <= 16
+
+Summary_Profile_name(1) = 'x' ! hydrogen mass fraction
+Summary_Profile_legend(1) = 'X'
+Summary_Profile_scaled_value(1) = .false.
+
+Summary_Profile_name(2) = 'y' ! helium mass fraction
+Summary_Profile_legend(2) = 'Y'
+Summary_Profile_scaled_value(2) = .false.
+
+Summary_Profile_name(3) = 'log_j_rot' ! specific angular momentum
+Summary_Profile_legend(3) = 'log j rel'
+
+Summary_Profile_name(4) = 'log_omega' ! angular velocity
+Summary_Profile_legend(4) = 'log \(0650) rel'
+
+Summary_Profile_name(5) = 'mass'
+Summary_Profile_legend(5) = 'm rel'
+
+Summary_Profile_name(6) = 'radius'
+Summary_Profile_legend(6) = 'r rel'
+
+Summary_Profile_name(7) = 'eps_nuc'
+Summary_Profile_legend(7) = 'eps nuc rel'
+
+Summary_Profile_name(8) = 'entropy'
+Summary_Profile_legend(8) = 'entropy rel'
+
+Summary_Profile_name(9) = 'opacity'
+Summary_Profile_legend(9) = 'opacity rel'
+
+Summary_Profile_name(10) = 'luminosity'
+Summary_Profile_legend(10) = 'L rel'
+
+Summary_Profile_name(11) = 'temperature'
+Summary_Profile_legend(11) = 'T rel'
+
+! Enables calling a subroutine to add extra information to a plot
+! see `$MESA_DIR/star/other/pgstar_decorator.f90`
+Summary_Profile_use_decorator = .false.
+
+
+! file output
+Summary_Profile_file_flag = .true.
+Summary_Profile_file_dir = 'png'
+Summary_Profile_file_prefix = 'Summary_Profile_'
+Summary_Profile_file_interval = 5 ! output when `mod(model_number,Summary_Profile_file_interval)==0`
+Summary_Profile_file_width = -1 ! (inches) negative means use same value as for window
+Summary_Profile_file_aspect_ratio = -1 ! negative means use same value as for window
+
+
+
+
+/ ! end of pgstar namelist
