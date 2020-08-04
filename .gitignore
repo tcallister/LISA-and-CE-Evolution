@@ -7,3 +7,4 @@ MESA_files/.ipynb_checkpoints/*
 *.o
 *.mod
 *.pdf
+\#*
