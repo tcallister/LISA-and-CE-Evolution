@@ -1,3 +1,12 @@
+# These are calculated in BinaryResidenceTime_AGN_Disk-ChangeGas.ipynb
+# asusming m1=m2=1 Msun
+# GW_frequency roughly in the LISA range, from 10^-4 to 1 Hz
+# the gw_fdot assumes pure GW-driven inspiral (Peters 1964)
+# the drag_fdot assumes no-feedback and the drag is calculated using a
+# temperature of 1e5 for the RSG envelope as representative
+#
+#
+# GW_frequency	gw_fdot	drag_fdot
 1.000000000000000048e-04 9.914944130051235472e-22 1.479447906132601266e-11
 2.000000000000000096e-04 1.259119419379940295e-20 2.348477162527041055e-11
 2.999999999999999737e-04 5.568457020673409528e-20 3.077375656594434530e-11
