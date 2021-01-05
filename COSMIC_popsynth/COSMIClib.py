@@ -33,10 +33,9 @@ def getGWemittingM(bpp, index):
     """
     Returns the mass emitting GWs from a cosmic bpp file, considering only the elements
     for which index == True. The stellar types kstar_* are according to Hurley et al. 2000
-    This is defined as the total mass for MS+MS common envelope,    
     """
     k1 = bpp.loc[index].kstar_1
-    k2 = bpp.loc[index].kstar_2   
+    k2 = bpp.loc[index].kstar_2
     Mcore1 = bpp.loc[index].massc_1
     Mcore2 = bpp.loc[index].massc_2
     M1 = bpp.loc[index].mass_1
