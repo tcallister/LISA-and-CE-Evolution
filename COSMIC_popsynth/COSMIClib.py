@@ -29,7 +29,7 @@ def make2Dmap(x, y, z, x1=0, x2=1, y1=0, y2=1, res=20):
             mat[j,i] = np.sum(z[(x>=x_int[i])*(x<x_int[i+1])*(y>=y_int[j])*(y<y_int[j+1])])
 
 
-def getGWemittingM_lieke(bpp, index):
+def getGWemittingM(bpp, index):
     """
     Returns the mass emitting GWs from a cosmic bpp file, considering only the elements
     for which index == True. index should be used to pass only CE systems to this function.
