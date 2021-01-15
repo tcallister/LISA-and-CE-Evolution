@@ -32,45 +32,38 @@ def make2Dmap(x, y, z, x1=0, x2=1, y1=0, y2=1, res=20):
 def getGWemittingM(bpp, index):
     """
     Returns the mass emitting GWs from a cosmic bpp file, considering only the elements
-    for which index == True. The stellar types kstar_* are according to Hurley et al. 2000
-    This is defined as the total mass for MS+MS common envelope,    
+    for which index == True. index should be used to pass only CE systems to this function.
+    The stellar types kstar_* are according to Hurley et al. 2000
     """
     k1 = bpp.loc[index].kstar_1
-    k2 = bpp.loc[index].kstar_2   
+    k2 = bpp.loc[index].kstar_2
     Mcore1 = bpp.loc[index].massc_1
     Mcore2 = bpp.loc[index].massc_2
     M1 = bpp.loc[index].mass_1
     M2 = bpp.loc[index].mass_2
     Mgw = np.zeros(len(M1)) # to be filled
     # print(len(k1),len(k2), len(Mcore1), len(Mcore2), len(M1), len(M2), len(Mgw))
-    # if both MS
-    ibothMS = (k1 <= 1) & (k2 <=1)
-    Mgw[ibothMS] = M1[ibothMS]+M2[ibothMS]
-    notbothMS = np.array(1-ibothMS, dtype=bool)
-    # consider CE where both stars are non-degenerate
-    inondeg = (k1<10) & (k2<10) & notbothMS
-    # donor 1
-    idonor1 = inondeg & (k1-k2 > 0) #NB strictly >
-    Mgw[idonor1] = Mcore1[idonor1]+M2[idonor1]
-    # double core
-    idc = inondeg & (k1-k2 == 0)
-    Mgw[idc] = Mcore1[idc]+Mcore2[idc]
-    # donor 2
-    idonor2 = inondeg & (k1-k2 < 0)
-    Mgw[idonor2] = Mcore2[idonor2]+M1[idonor2]
-    # now deal with degenerate stars
-    # 1 is degenerate but 2 isn't
-    ideg1nondeg2 = (k1>=10)&(k2<10)
-    Mgw[ideg1nondeg2] = Mcore2[ideg1nondeg2]+M1[ideg1nondeg2]
-    # 2 degenerate but 1 not
-    ideg2nondeg1 = (k1<10)&(k2>=10)
-    Mgw[ideg2nondeg1] = Mcore1[ideg2nondeg1]+M2[ideg2nondeg1]
-    # both degenerate -- should be rare
-    ibothdeg = (k1>=10) & (k2>=10)
-    Mgw[ibothdeg] = M1[ibothdeg]+M2[ibothdeg]
+    # one non-MS and non-degenerate and the other MS or degenerate
+    star1_nondeg_star2_ms = np.array(((k1>1) & (k1<10)) & ((k2 <=1) | (k2>=10)), dtype=bool)
+    Mgw[star1_nondeg_star2_ms] = Mcore1[star1_nondeg_star2_ms]+M2[star1_nondeg_star2_ms]
+    # other non-MS and non-degenerate and other MS or degenerate
+    star2_nondeg_star1_ms = np.array(((k2>1) & (k2<10)) & ((k1 <=1)| (k1>=10)), dtype=bool)
+    Mgw[star2_nondeg_star1_ms] = Mcore2[star2_nondeg_star1_ms]+M1[star2_nondeg_star1_ms]
+    # both non-MS and non-deg
+    bothnonMS = np.array(((k1>1) & (k1<10)) & ((k2>1) & (k2<10)), dtype=bool)
+    Mgw[bothnonMS] = Mcore1[bothnonMS] + Mcore2[bothnonMS]
+    # now deal with MS and degenerate stars
+    # both MS or both compact
+    bothMS_or_deg = np.array(((k1<=1) & (k2<=1)) | ((k1>10) & (k2>10)), dtype=bool)
+    Mgw[bothMS_or_deg] = M1[bothMS_or_deg] + M2[bothMS_or_deg]
+    # one MS other degenerate
+    oneMS_other_deg = np.array((k1<=1) & (k2>10), dtype=bool)
+    Mgw[oneMS_other_deg] = M1[oneMS_other_deg] + M2[oneMS_other_deg]
+    # other MS one degenerate
+    otherMS_one_deg = np.array((k2<=1) & (k1>10), dtype=bool)
+    Mgw[otherMS_one_deg] = M1[otherMS_one_deg] + M2[otherMS_one_deg]
     ## sanity check:
-    # all = np.array(idonor1,dtype=int)+np.array(idonor2,dtype=int)+np.array(idc,dtype=int)+np.array(ideg1nondeg2,dtype=int)+np.array(ideg2nondeg1,dtype=int)+np.array(ibothdeg,dtype=int)
-    # print(min(all), max(all)) ## should both be 1
+    all = np.array(star1_nondeg_star2_ms,dtype=int)+np.array(star2_nondeg_star1_ms,dtype=int)+np.array(bothnonMS,dtype=int)+np.array(bothMS_or_deg,dtype=int)+np.array(oneMS_other_deg,dtype=int)+np.array(otherMS_one_deg,dtype=int)
+    # print("1, 1?", min(all), max(all))
     #print(min(Mgw), max(Mgw))
-    # Mgw = Mcore1 + M2
     return Mgw
