@@ -2,6 +2,11 @@
 
 ** TODO add bibliographic info
 
+** Figure 2 (and 6)
+
+   This was produced using the notebook =CEinLISA.ipynb= and relies
+   partially on the core masses from BSE stored in =core_masses.txt=.
+
 ** Rapid population synthesis: COSMIC
 
    The input files to reproduce our rapid population synthesis are in
@@ -9,6 +14,19 @@
    version 3.2.0.
 
    The folder =COSMIC_popsynth= contains also notebooks that have been
-   used to analyze the data and libraries of functions these use.
+   used to analyze the data and libraries of functions these use. The
+   output data and these scripts were used to produce figure 4
 
-**
+** LISA SNR calculation
+
+   The calculation and the plot in figure 3 are done in =SNR_grid.ipynb=
+
+** Stealth bias
+
+   The calculations and the plots in figure 5 are done in
+   =FdotPN/M-D.ipynb=
+
+** Gas drag calculation
+
+   The estimate for the gas drag inspiral neglecting the feedback of
+   the envelope is done in =gas-drag.ipynb=. The results are logged in =fdot_and_f_m1*.txt=.
