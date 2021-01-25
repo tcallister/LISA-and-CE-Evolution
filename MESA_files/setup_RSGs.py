@@ -11,10 +11,10 @@ Masses = np.linspace(0.1,10.0,20)
 print("Masses",Masses)
 print("=================================")
 # these will all become sys.argv if needed
-TEMPLATE = '/mnt/home/mrenzo/Templates/LISA-and-CE-Evolution/MESA_files/RSG_template/'
-ROOT = "/mnt/ceph/users/mrenzo/RUNS/Radii_RSG_cores/"
-DESTINATION="/mnt/ceph/users/mrenzo/RESULTS/Radii_RSG_cores/"
-RUNFILE=ROOT+'/runFile.txt' 
+TEMPLATE = 'LISA-and-CE-Evolution/MESA_files/RSG_template/'
+ROOT = "RUNS/Radii_RSG_cores/"
+DESTINATION="RESULTS/Radii_RSG_cores/"
+RUNFILE=ROOT+'/runFile.txt'
 print("template:",TEMPLATE)
 print("root:",ROOT)
 # print("destination:",DESTINATION)
@@ -47,7 +47,7 @@ if (go_on == 'Y') or (go_on == 'y'):
         # print(RUNFILE)
         F = open(RUNFILE,"a")
         headerline = "export OMP_NUM_THREADS=1 && export MESA_DIR=/mnt/home/mrenzo/codes/mesa/mesa_12115/mesa12115 && export MESASDK_ROOT=/mnt/home/mrenzo/codes/mesa/mesa_12115/mesasdk && source $MESASDK_ROOT/bin/mesasdk_init.sh"
-        backline = " && ./clean && ./mk && ./rn 2>&1 | tee output ; tail -40 output | mail -s \" one model done\" mrenzo@flatironinstitute.org"+"\n" # missing: move to destination
+        backline = " && ./clean && ./mk && ./rn 2>&1 | tee output ; tail -40 output | mail -s \" one model done\" mrenzo@flatironinstitute.org"+"\n"
         for M in Masses:
             M = round(M,1)
             folder_name = str(M)+"/"

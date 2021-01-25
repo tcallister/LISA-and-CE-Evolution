@@ -1,0 +1,14 @@
+* Code for the paper [][Prospects of gravitational-waves detections from common-envelope evolution with LISA]
+
+** TODO add bibliographic info
+
+** Rapid population synthesis: COSMIC
+
+   The input files to reproduce our rapid population synthesis are in
+   =COSMIC_popsynth/COSMIC_ini_files=. These were used with =python 3.7.6= and [[https://cosmic-popsynth.github.io/][COSMIC]]
+   version 3.2.0.
+
+   The folder =COSMIC_popsynth= contains also notebooks that have been
+   used to analyze the data and libraries of functions these use.
+
+**

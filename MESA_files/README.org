@@ -1,0 +1,8 @@
+* MESA files
+
+The setup in =RSG_template= was used to run a grid of simple RSG models
+with [[http://mesa.sourceforge.net/][MESA]] revision 12115 to build up intuition on the
+Kelvin-Helmoholtz timescales and on the radii of the He cores as a
+function of time.
+
+No data produced have been used in a quantitative manner in the paper.
