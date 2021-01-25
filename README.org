@@ -1,4 +1,4 @@
-* Code for the paper [[arxiv:][Prospects of gravitational-waves detections from common-envelope evolution with LISA]]
+* Code for the paper [[arxiv:]["Prospects of gravitational-waves detections from common-envelope evolution with LISA"]]
 
 ** TODO add bibliographic info
 
