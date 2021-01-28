@@ -38,3 +38,9 @@
 ** Stealth bias
 
    The calculations and the plots in figure 5 are done in =FdotPN/M-D.ipynb=
+
+** MESA files
+
+ These were used to run some red-supergiant models to build up
+ intuition on the core evolution in terms of radius and mass. The data
+ were not used directly in the paper. See inside that folder for more info.
