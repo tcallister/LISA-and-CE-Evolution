@@ -9,26 +9,32 @@
    Note that the =nan= in =core_masses.txt= are for stars that do not
    build up a core within the age of the Universe, which are not used.
 
+
 ** Rapid population synthesis: COSMIC
 
    The input files to reproduce our rapid population synthesis are in
-   =COSMIC_popsynth/COSMIC_ini_files=. These were used with =python 3.7.6= and [[https://cosmic-popsynth.github.io/][COSMIC]]
-   version 3.2.0.
+   =COSMIC_popsynth/COSMIC_ini_files=. These were used with =python 3.7.6=
+   and [[https://cosmic-popsynth.github.io/][COSMIC]] version 3.2.0.
 
    The folder =COSMIC_popsynth= contains also notebooks that have been
-   used to analyze the data and libraries of functions these use. The
-   output data and these scripts were used to produce figure 4
+   used to analyze the data and libraries of functions these use.
+
+   The output data and these scripts were used to produce figure 4
+   (see =CE_rate_init.ipynb=).
+
+
+** Gas drag calculation
+
+   The estimate for the gas drag inspiral neglecting the feedback of
+   the envelope is done in =gas-drag.ipynb=. The results are logged in
+   =fdot_and_f_m1_0.5_m2_0.3.txt=.
+
 
 ** LISA SNR calculation
 
    The calculation and the plot in figure 3 are done in =SNR_grid.ipynb=
 
+
 ** Stealth bias
 
-   The calculations and the plots in figure 5 are done in
-   =FdotPN/M-D.ipynb=
-
-** Gas drag calculation
-
-   The estimate for the gas drag inspiral neglecting the feedback of
-   the envelope is done in =gas-drag.ipynb=. The results are logged in =fdot_and_f_m1*.txt=.
+   The calculations and the plots in figure 5 are done in =FdotPN/M-D.ipynb=
