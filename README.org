@@ -4,8 +4,10 @@
 
 ** Figure 2 (and 6)
 
-   This was produced using the notebook =CEinLISA.ipynb= and relies
+   This was produced using the notebook =CE_crossing_LISA_band.ipynb= and relies
    partially on the core masses from BSE stored in =core_masses.txt=.
+   Note that the =nan= in =core_masses.txt= are for stars that do not
+   build up a core within the age of the Universe, which are not used.
 
 ** Rapid population synthesis: COSMIC
 
