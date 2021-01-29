@@ -5,4 +5,6 @@ with [[http://mesa.sourceforge.net/][MESA]] revision 12115 to build up intuition
 Kelvin-Helmoholtz timescales and on the radii of the He cores as a
 function of time.
 
-No data produced have been used in a quantitative manner in the paper.
+Some of the results are analyzed in the notebook =Roche_Radii.ipynb=
+which uses functions defined in [[https://github.com/mathren90/plotFunc][plotFunc]]. No data produced have been
+used in a quantitative manner in the paper.
