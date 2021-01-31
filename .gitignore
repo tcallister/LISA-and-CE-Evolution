@@ -1,4 +1,4 @@
-.ipynb_checkpoints/**
+*.ipynb_checkpoints/**
 COSMIC_popsynth/.ipynb_checkpoints/*
 MESA_files/.ipynb_checkpoints/*
 *~
@@ -7,4 +7,5 @@ MESA_files/.ipynb_checkpoints/*
 *.mod
 *.pdf
 \#*
-__pycache__/
+.#*
+*__pycache__/
