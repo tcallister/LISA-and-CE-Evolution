@@ -1,47 +1,55 @@
-*  [[arxiv:]["Prospects of gravitational-waves detections from common-envelope evolution with LISA"]]
+*  [[http://arxiv.org/abs/2102.00078]["Prospects of gravitational-waves detections from common-envelope evolution with LISA"]]
 
  This repository contains the code to reproduce the data and figures
- of XXX submitted to the Astrophysical Journal.
+ of http://arxiv.org/abs/2102.00078 submitted to the Astrophysical Journal.
 
-** TODO add bibliographic info
+** Figures and results
 
-** Figure 2 (and 6)
+*** Figure 2 (and 6)
 
-   These were produced using the notebook =CE_crossing_LISA_band.ipynb= and relies
-   partially on the core masses from BSE stored in =core_masses.txt=.
-   Note that the =nan= in =core_masses.txt= are for stars that do not
-   build up a core within the age of the Universe, which are not used.
+    These were produced using the notebook =CE_crossing_LISA_band.ipynb= and relies
+    partially on the core masses from BSE stored in =core_masses.txt=.
+    Note that the =nan= in =core_masses.txt= are for stars that do not
+    build up a core within the age of the Universe, which are not used.
 
-** LISA SNR calculation and figure 3
+*** LISA SNR calculation and figure 3
 
-   The calculation and the plot in figure 3 are done in =SNR_grid.ipynb=
-   This uses =fdot_and_f_m1_0.5_m2_0.3.txt= (see below) for the solid
-   orange line.
+    The calculation and the plot in figure 3 are done in =SNR_grid.ipynb=
+    This uses =fdot_and_f_m1_0.5_m2_0.3.txt= (see below) for the solid
+    orange line.
 
-*** Gas drag calculation
+**** Gas drag calculation
 
-    The estimate for the gas drag inspiral neglecting the feedback of
-    the envelope is done in =gas-drag.ipynb=. The results are logged in
-    =fdot_and_f_m1_0.5_m2_0.3.txt=.
+     The estimate for the gas drag inspiral neglecting the feedback of
+     the envelope is done in =gas-drag.ipynb=. The results are logged in
+     =fdot_and_f_m1_0.5_m2_0.3.txt=.
 
-** Rapid population synthesis: COSMIC and figure 4
+*** Rapid population synthesis: COSMIC and figure 4
 
-   The input files to reproduce our rapid population synthesis are in
-   =COSMIC_popsynth/COSMIC_ini_files=. These were used with =python 3.7.6=
-   and [[https://cosmic-popsynth.github.io/][COSMIC]] version 3.2.0.
+    The input files to reproduce our rapid population synthesis are in
+    =COSMIC_popsynth/COSMIC_ini_files=. These were used with =python 3.7.6=
+    and [[https://cosmic-popsynth.github.io/][COSMIC]] version 3.2.0.
 
-   The folder =COSMIC_popsynth= contains also notebooks that have been
-   used to analyze the data and libraries of functions these use.
+    The folder =COSMIC_popsynth= contains also notebooks that have been
+    used to analyze the data and libraries of functions these use.
 
-   The output data and these scripts were used to produce figure 4
-   (see =CE_rate_init.ipynb=).
+    The output data and these scripts were used to produce figure 4
+    (see =CE_rate_init.ipynb=).
 
-** Stealth bias and figure 5
+*** Stealth bias and figure 5
 
-   The calculations and the plots in figure 5 are done in =Stealth_bias/M-D.ipynb=
+    The calculations and the plots in figure 5 are done in =Stealth_bias/M-D.ipynb=
 
-** MESA files
 
-  These were used to run some simple red-supergiant models to build up
-  intuition on the core evolution in terms of radius and mass. The data
-  were not used directly in the paper. See inside that folder for more info.
+** Extras
+
+*** Dependencies
+
+    We build the list of dependencies using [[https://python-poetry.org/][poetry]]. See =poetry.lock=
+    and =pyproject.toml= for version numbers of all the python packages used.
+
+*** MESA files
+
+    These were used to run some simple red-supergiant models to build up
+    intuition on the core evolution in terms of radius and mass. The data
+    were not used directly in the paper. See inside that folder for more info.

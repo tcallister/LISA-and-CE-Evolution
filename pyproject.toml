@@ -3,7 +3,7 @@ name = "lisa-and-ce-evolution"
 version = "0.1.0"
 description = "code for \"Prospects of gravitational-waves detections from common-envelope evolution with LISA\""
 authors = ["M. Renzo, T. Callister, K. Chatziioannou, L. van Son, C. M. F. Mingarelli, M. Cantiello, K. E. S. Ford, B. McKernan, G. Ashton"]
-license = "GP"
+license = "GPLv3"
 
 [tool.poetry.dependencies]
 python = "^3.7"
