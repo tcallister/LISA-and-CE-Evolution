@@ -28,7 +28,8 @@
 
     The input files to reproduce our rapid population synthesis are in
     =COSMIC_popsynth/COSMIC_ini_files=. These were used with =python 3.7.6=
-    and [[https://cosmic-popsynth.github.io/][COSMIC]] version 3.2.0.
+    and [[https://cosmic-popsynth.github.io/][COSMIC]] version 3.2.0. The numerical output of our COSMIC runs
+    are available on [[https://zenodo.org/record/4490011][zenodo]].
 
     The folder =COSMIC_popsynth= contains also notebooks that have been
     used to analyze the data and libraries of functions these use.
