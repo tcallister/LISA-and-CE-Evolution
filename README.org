@@ -9,8 +9,6 @@
 
     These were produced using the notebook =CE_crossing_LISA_band.ipynb= and relies
     partially on the core masses from BSE stored in =core_masses.txt=.
-    Note that the =nan= in =core_masses.txt= are for stars that do not
-    build up a core within the age of the Universe, which are not used.
 
 *** LISA SNR calculation and figure 3
 
