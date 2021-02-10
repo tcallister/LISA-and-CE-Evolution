@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "lisa-and-ce-evolution"
+version = "0.1.0"
+description = "code for \"Prospects of gravitational-waves detections from common-envelope evolution with LISA\""
+authors = ["M. Renzo, T. Callister, K. Chatziioannou, L. van Son, C. M. F. Mingarelli, M. Cantiello, K. E. S. Ford, B. McKernan, G. Ashton"]
+license = "GPLv3"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+seaborn = "^0.11.1"
+matplotlib = "^3.3.4"
+jupyter = "^1.0.0"
+ipykernel = "^5.4.3"
+tqdm = "^4.56.0"
+astropy = "^4.2"
+termcolor = "^1.1.0"
+h5py = "^3.1.0"
+cosmic-popsynth = "^3.2.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

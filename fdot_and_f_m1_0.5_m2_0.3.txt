@@ -1,4 +1,4 @@
-# These are calculated in BinaryResidenceTime_AGN_Disk-ChangeGas.ipynb
+# These are calculated in gas-drag.ipynb
 # using m1=0.5 and m2=0.3Msun
 # GW_frequency roughly in the LISA range, from 10^-4 to 1 Hz
 # the gw_fdot assumes pure GW-driven inspiral (Peters 1964)

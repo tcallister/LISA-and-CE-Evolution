@@ -1,3 +1,0 @@
-# defaults for plots
-
-##TBD
