@@ -10,3 +10,4 @@ MESA_files/.ipynb_checkpoints/*
 .#*
 *__pycache__/
 COSMIC_popsynth/COSMIC_results/*.tar.gz
+*.ipynb_checkpoints/*
