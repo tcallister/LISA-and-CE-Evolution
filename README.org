@@ -13,7 +13,7 @@
 *** LISA SNR calculation and figure 3
 
     The calculation and the plot in figure 3 are done in =SNR_grid.ipynb=
-    This uses =fdot_and_f_m1_0.5_m2_0.3.txt= (see below) for the solid
+    This uses =fdot_and_f_m1_0.5_m2_0.3_T90000.txt= (see below) for the solid
     orange line.
 
 **** Gas drag calculation
